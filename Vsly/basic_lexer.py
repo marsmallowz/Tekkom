@@ -1,7 +1,7 @@
 from sly import Lexer
 
 class BasicLexer(Lexer):
-    tokens = { NAME, ANGKA, STRING, IF, THEN, ELSE, FOR, FUN, TO, ARROW, EQEQ }
+    tokens = { NAME, NUMBER, STRING, IF, THEN, ELSE, FOR, FUN, TO, ARROW, EQEQ }
     ignore = '\t '
 
     literals = { '=', '+', '-', '/', '*', '(', ')', ',', ';' }
@@ -20,7 +20,7 @@ class BasicLexer(Lexer):
     EQEQ = r'=='
 
     @_(r'\d+')
-    def ANGKA(self, t):
+    def NUMBER(self, t):
         t.value = int(t.value)
         return t
 

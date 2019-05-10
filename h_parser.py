@@ -80,7 +80,10 @@ class BasicParser(Parser):
     @_('NUMBER')
     def expr(self, p):
         return ('num', p.NUMBER)
-
+        
+    @_('PRINT expr')
+    def expr(self, p):
+        return ('print', p.PRINT)
 if __name__ == '__main__':
     lexer = h_lexer.BasicLexer()
     parser = BasicParser()

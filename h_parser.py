@@ -1,9 +1,9 @@
-from sly import Lexer
 from sly import Parser
 
-import h_lexer
-class BasicParser(Parser):
-    tokens = h_lexer.BasicLexer.tokens
+import bhs_lexer
+
+class BahasakuParser(Parser):
+    tokens = bhs_lexer.BahasakuLexer.tokens
 
     precedence = (
         ('left', '+', '-'),
@@ -80,18 +80,22 @@ class BasicParser(Parser):
     @_('NUMBER')
     def expr(self, p):
         return ('num', p.NUMBER)
-
+        
     @_('PRINT expr')
     def expr(self, p):
         return ('print', p.expr)
 
+    @_('PRINT STRING')
+    def statement(self, p):
+        return ('print', p.STRING)
+
 if __name__ == '__main__':
-    lexer = h_lexer.BasicLexer()
-    parser = BasicParser()
+    lexer = bhs_lexer.BahasakuLexer()
+    parser = BahasakuParser()
     env = {}
     while True:
         try:
-            text = input('basic > ')
+            text = input('bhs > ')
         except EOFError:
             break
         if text:

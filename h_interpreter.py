@@ -1,7 +1,7 @@
-import h_parser
-import h_lexer
+import bhs_lexer
+import bhs_parser
 
-class BasicExecute:
+class BahasakuExecute:
 
     def __init__(self, tree, env):
         self.env = env
@@ -33,6 +33,12 @@ class BasicExecute:
 
         if node[0] == 'str':
             return node[1]
+
+        if node[0] == 'print':
+            if node[1][0] == '"':
+                print(node[1][1:len(node[1])-1])
+            else:
+                return self.walkTree(node[1])
 
         if node[0] == 'if_stmt':
             result = self.walkTree(node[1])
@@ -73,7 +79,6 @@ class BasicExecute:
                     break
                 pass
             return c
-
         if node[0] == 'var_assign':
             self.env[node[1]] = self.walkTree(node[2])
             return node[1]
@@ -101,6 +106,6 @@ class BasicExecute:
 
         if node[0] == 'for_loop_setup':
             return (self.walkTree(node[1]), self.walkTree(node[2]))
-            
-        if node[0] == 'print':
-            return (self.walkTree(node[1]))
+
+        # if node[0] == 'print':
+        #     return (self.walkTree(node[1]))

@@ -4,7 +4,7 @@ Repo Teknik Kompilasi (Belajar) dengan Library Sly.
 ## Nama Anggota:
 - Alsandy Maulana
 - Risky Hijriani
-- Adelia Putri 
+- Bina Esterly
 
 # Dokumentasi
 

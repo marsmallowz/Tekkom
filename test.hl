@@ -1,9 +1,0 @@
-a=1
-b=1
-c=0
-y="Salah"
-n="Enggak Salah"
-IF a==b THEN  n ELSE PRINT y
-
-
-FOR i=0 TO 5 THEN PRINT i

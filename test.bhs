@@ -1,0 +1,10 @@
+a=1
+b=2
+c=0
+y="Salah"
+n="Enggak Salah"
+JIKA a==b MAKA  n JIKATIDAK CETAK y
+
+
+UNTUK i=0 KE 5 MAKA CETAK i
+CETAK "Mohon Maaf Lahir Dan Batin"

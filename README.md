@@ -12,13 +12,13 @@ Repo Teknik Kompilasi (Belajar) dengan Library Sly.
 Teknik Kompilasi (Belajar) dengan Library Sly. 
 
 <-- Arti -->
-- IF => IF
-- PRINT => PRINT
-- THEN => THEN
+- IF => JIKA
+- PRINT => CETAK
+- THEN => MAKA
 - ELSE => ESLE
-- FOR => FOR
-- FUN => FUN
-- TO => TO
+- FOR => UNTUK
+- FUN => FUNGSI
+- TO => UNTUK
 - ARROW => ->
 
 ## Cara Menggunakan
@@ -37,7 +37,7 @@ Dapat mengedit kode yang berada pada
 
 **Contohnya:**
 ```
-PRINT "Hello Word" 
+CETAK "Hello Word" 
 ```
 
 **Hasilnya**
@@ -48,7 +48,7 @@ Hello World
 **_**
 ```
 a= "Hello Word"
-PRINT a 
+CETAK a 
 ```
 
 **Hasilnya**
@@ -79,10 +79,10 @@ PRINT a
 ```
 a=4
 b=2
-TNIRP a+b
-TNIRP a-b
-TNIRP a*b
-TNIRP a/b
+CETAK a+b
+CETAK a-b
+CETAK a*b
+CETAK a/b
 ```
 
 **result**
@@ -100,10 +100,10 @@ IF expr THEN stmt1 ELSE stmt2
 **Contohnya:**
 ```
 a=1
-b=0
+b=2
 y="Salah"
 n="Enggak Salah"
-IF a==b THEN PRINT y ELSE PRINT n
+JIKA a==b MAKA  n JIKATIDAK CETAK y
 ```
 
 **Hasilnya**
@@ -117,7 +117,7 @@ FOR expr TO stmt1 THEN stmt2
 
 **Contohnya:**
 ```
-FOR i=0 TO 10 THEN PRINT I 
+UNTUK i=0 KE 10 MAKA CETAK i
 ```
 
 **Hasilnya**
@@ -141,15 +141,15 @@ Dengan Menggunakan symbol pagar (#).
 **Contoh:**
 ```
 a=1
-b=0
-y="Enggak Salah" #jika benar
-n="Salah" #jika salah
-IF a==b THEN PRINT y ELSE PRINT n
+b=2
+y="Salah" #Jika Salah
+n="Enggak Salah" #Jika Benar
+JIKA a==b MAKA  n JIKATIDAK CETAK y
 ```
 
 **Hasilnya**
 ```
-"Enggak Salah"
+"Salah"
 ```
 # SUMBER
 Ini adalah modifikasi kode sumber seri bahasa pemrograman howCode.

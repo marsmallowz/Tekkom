@@ -7,13 +7,13 @@ class BahasakuLexer(Lexer):
     literals = { '=', '+', '-', '/', '*', '(', ')', ',', ';' }
 
     # definisi token
-    IF = r'IF'
-    PRINT = r'PRINT'
-    THEN = r'THEN'
-    ELSE = r'ELSE'
-    FOR = r'FOR'
-    FUN = r'FUN'
-    TO = r'TO'
+    IF = r'JIKA'
+    PRINT = r'CETAK'
+    THEN = r'MAKA'
+    ELSE = r'JIKATIDAK'
+    FOR = r'UNTUK'
+    FUN = r'FUNGSI'
+    TO = r'KE'
     ARROW = r'->'
     NAME = r'[a-zA-Z_][a-zA-Z0-9_]*'
     STRING = r'\".*?\"'
